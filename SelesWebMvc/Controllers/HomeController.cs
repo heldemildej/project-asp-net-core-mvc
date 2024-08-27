@@ -17,7 +17,9 @@ namespace SelesWebMvc.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Selles Web MVC App from C# Course";
+            ViewData["Name"] = "Name: Heldemilde João";
+            ViewData["E-mail"] = "E-mail: heldemildemuc@gmail.com";
 
             return View();
         }

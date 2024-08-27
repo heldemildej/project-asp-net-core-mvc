@@ -11810,11 +11810,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DevC#\\Projeto ASP.NET MVC\\SalesWebMvc\\SelesWebMvc\\SelesWebMvc\\SelesWebMvc.csproj",
+      "projectUniqueName": "C:\\DevC#\\Projeto ASP.NET MVC\\SelesWebMvc\\SelesWebMvc\\SelesWebMvc.csproj",
       "projectName": "SelesWebMvc",
-      "projectPath": "C:\\DevC#\\Projeto ASP.NET MVC\\SalesWebMvc\\SelesWebMvc\\SelesWebMvc\\SelesWebMvc.csproj",
+      "projectPath": "C:\\DevC#\\Projeto ASP.NET MVC\\SelesWebMvc\\SelesWebMvc\\SelesWebMvc.csproj",
       "packagesPath": "C:\\Users\\DEV HELDEMILDE\\.nuget\\packages\\",
-      "outputPath": "C:\\DevC#\\Projeto ASP.NET MVC\\SalesWebMvc\\SelesWebMvc\\SelesWebMvc\\obj\\",
+      "outputPath": "C:\\DevC#\\Projeto ASP.NET MVC\\SelesWebMvc\\SelesWebMvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
