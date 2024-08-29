@@ -62,4 +62,8 @@ C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Sel
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\SelesWebMvc.dll
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\SelesWebMvc.pdb
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\SelesWebMvc.csproj.CopyComplete
-C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Index.g.cshtml.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments1\Create.g.cshtml.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments1\Delete.g.cshtml.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments1\Details.g.cshtml.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments1\Edit.g.cshtml.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments1\Index.g.cshtml.cs
