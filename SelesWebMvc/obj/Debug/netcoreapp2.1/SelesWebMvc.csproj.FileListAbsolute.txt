@@ -67,3 +67,8 @@ C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Raz
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments1\Details.g.cshtml.cs
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments1\Edit.g.cshtml.cs
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments1\Index.g.cshtml.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Create.g.cshtml.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Delete.g.cshtml.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Details.g.cshtml.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Edit.g.cshtml.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Index.g.cshtml.cs

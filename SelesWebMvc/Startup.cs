@@ -37,7 +37,8 @@ namespace SelesWebMvc
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<SelesWebMvcContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("SelesWebMvcContext")));
+                    options.UseMySql(Configuration.GetConnectionString("SelesWebMvcContext"), builder =>
+                    builder.MigrationsAssembly("SelesWebMvc")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
