@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SelesWebMvc.Data;
 
 namespace SelesWebMvc.Migrations
 {
     [DbContext(typeof(SelesWebMvcContext))]
-    partial class SelesWebMvcContextModelSnapshot : ModelSnapshot
+    [Migration("20240901024421_OtherEntities")]
+    partial class OtherEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
