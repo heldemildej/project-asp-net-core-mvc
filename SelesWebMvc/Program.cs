@@ -1,12 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
+using SelesWebMvc.Data;
 
 namespace SelesWebMvc
 {
@@ -14,7 +9,17 @@ namespace SelesWebMvc
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            var host = CreateWebHostBuilder(args).Build();
+
+            // Popula o banco
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var seedingService = services.GetRequiredService<SeedingService>();
+                seedingService.Seed(); // só insere se as tabelas estiverem vazias
+            }
+
+            host.Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

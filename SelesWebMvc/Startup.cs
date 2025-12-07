@@ -1,16 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using SelesWebMvc.Data;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using System;
 
 namespace SelesWebMvc
 {
@@ -23,25 +18,26 @@ namespace SelesWebMvc
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // Configura os serviços do projeto
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
+            // Pega a connection string do appsettings.json
+            var connectionString = Configuration.GetConnectionString("SelesWebMvcContext");
 
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
+            // Configura o DbContext com MySQL
             services.AddDbContext<SelesWebMvcContext>(options =>
-                    options.UseMySql(Configuration.GetConnectionString("SelesWebMvcContext"), builder =>
-                    builder.MigrationsAssembly("SelesWebMvc")));
+                options.UseMySql(
+                    connectionString,
+                    mysqlOptions => mysqlOptions.ServerVersion(
+                        new Version(8, 0, 32), ServerType.MySql)));
+
+            // Registra o SeedingService para popular o banco
+            services.AddScoped<SeedingService>();
+
+            services.AddMvc(); // ou AddControllersWithViews()
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // Configura o pipeline HTTP
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -56,8 +52,6 @@ namespace SelesWebMvc
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
