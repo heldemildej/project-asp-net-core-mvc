@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SelesWebMvc.Data;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using System;
+using SelesWebMvc.Services;
 
 namespace SelesWebMvc
 {
@@ -33,6 +34,9 @@ namespace SelesWebMvc
 
             // Registra o SeedingService para popular o banco
             services.AddScoped<SeedingService>();
+
+            // Registrar SellerService
+            services.AddScoped<SellerService>();
 
             services.AddMvc(); // ou AddControllersWithViews()
         }
