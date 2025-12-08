@@ -73,3 +73,4 @@ C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Raz
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\SelesWebMvc.genruntimeconfig.cache
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\SelesWeb.2D8FD463.Up2Date
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Index.cshtml.g.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Create.cshtml.g.cs

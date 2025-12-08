@@ -22,5 +22,13 @@ namespace SelesWebMvc.Services
                                  .Include(s => s.Department)
                                  .ToListAsync();
         }
+
+        // Inserir um novo vendedor no banco de dados
+        public void Insert(Seller obj)
+        {
+            _context.Seller.Add(obj);
+            _context.SaveChanges();
+        }
+
     }
 }
