@@ -2,6 +2,7 @@
 using SelesWebMvc.Models;
 using SelesWebMvc.Models.ViewModels;
 using SelesWebMvc.Services;
+using SelesWebMvc.Services.Exceptions;
 using System.Threading.Tasks;
 
 namespace SelesWebMvc.Controllers
@@ -90,6 +91,55 @@ namespace SelesWebMvc.Controllers
             return View(seller);
         }
 
+        // GET: Sellers/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var seller = await _sellerService.FindByIdAsync(id.Value);
+            if (seller == null)
+            {
+                return NotFound();
+            }
+
+            var departments = await _departmentService.FindAllAsync();
+            var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Seller seller)
+        {
+            if (!ModelState.IsValid)
+            {
+                var departments = await _departmentService.FindAllAsync();
+                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
+                return View(viewModel);
+            }
+
+            if (id != seller.Id)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                await _sellerService.UpdateAsync(seller);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (NotFoundException)
+            {
+                return NotFound();
+            }
+            catch (DbConcurrencyException e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
 
     }
 }

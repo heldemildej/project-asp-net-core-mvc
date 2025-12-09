@@ -76,3 +76,4 @@ C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Raz
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Create.cshtml.g.cs
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Delete.cshtml.g.cs
 C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Details.cshtml.g.cs
+C:\DevC#\Projeto ASP.NET MVC\SelesWebMvc\SelesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Edit.cshtml.g.cs

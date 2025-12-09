@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore; 
 using System.Threading.Tasks;
 using System.Linq;
+using SelesWebMvc.Services.Exceptions;
 
 namespace SelesWebMvc.Services
 {
@@ -44,6 +45,25 @@ namespace SelesWebMvc.Services
             var obj = await _context.Seller.FindAsync(id);
             _context.Seller.Remove(obj);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(Seller obj)
+        {
+            bool hasAny = await _context.Seller.AnyAsync(x => x.Id == obj.Id);
+            if (!hasAny)
+            {
+                throw new NotFoundException("Id not found");
+            }
+
+            try
+            {
+                _context.Update(obj);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException e)
+            {
+                throw new DbConcurrencyException(e.Message);
+            }
         }
 
 
