@@ -35,7 +35,10 @@ namespace SelesWebMvc
             // Registra o SeedingService para popular o banco
             services.AddScoped<SeedingService>();
 
-            // Registrar SellerService
+            // Registrar o DepartmentServiceular 
+            services.AddScoped<DepartmentService>();
+
+            // Registrar o SellerService
             services.AddScoped<SellerService>();
 
             services.AddMvc(); // ou AddControllersWithViews()

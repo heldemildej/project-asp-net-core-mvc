@@ -27,7 +27,6 @@ namespace SelesWebMvc.Services
         // Inserir um novo vendedor no banco de dados
         public void Insert(Seller obj)
         {
-            obj.Department = _context.Department.First(); // forçar 1º departamento
             _context.Add(obj);
             _context.SaveChanges();
         }
