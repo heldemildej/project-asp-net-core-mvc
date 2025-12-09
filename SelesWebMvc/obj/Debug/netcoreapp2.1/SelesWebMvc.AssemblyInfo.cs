@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SelesWebMvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61528ddd19878549c7046e8bdf832d058d8e3a4f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+876c05bb65c454f86436a74f9274d4a6e7ee1ef3")]
 [assembly: System.Reflection.AssemblyProductAttribute("SelesWebMvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SelesWebMvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

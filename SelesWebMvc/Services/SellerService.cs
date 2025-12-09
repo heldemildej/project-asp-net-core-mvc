@@ -2,6 +2,7 @@
 using SelesWebMvc.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore; 
 using System.Threading.Tasks;
 using System.Linq;
 
@@ -20,8 +21,8 @@ namespace SelesWebMvc.Services
         public async Task<List<Seller>> FindAllAsync()
         {
             return await _context.Seller
-                                 .Include(s => s.Department)
-                                 .ToListAsync();
+                .Include(s => s.Department) 
+                .ToListAsync();
         }
 
         // Inserir um novo vendedor no banco de dados
@@ -31,11 +32,11 @@ namespace SelesWebMvc.Services
             _context.SaveChanges();
         }
 
-        public async Task<Seller> FindByIdAsync(int id)
+          public async Task<Seller> FindByIdAsync(int id)
         {
             return await _context.Seller
-                .Include(obj => obj.Department)
-                .FirstOrDefaultAsync(obj => obj.Id == id);
+                .Include(s => s.Department) 
+                .FirstOrDefaultAsync(s => s.Id == id);
         }
 
         public async Task RemoveAsync(int id)
