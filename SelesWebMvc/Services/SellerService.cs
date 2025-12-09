@@ -3,6 +3,7 @@ using SelesWebMvc.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace SelesWebMvc.Services
 {
@@ -26,9 +27,11 @@ namespace SelesWebMvc.Services
         // Inserir um novo vendedor no banco de dados
         public void Insert(Seller obj)
         {
-            _context.Seller.Add(obj);
+            obj.Department = _context.Department.First(); // forçar 1º departamento
+            _context.Add(obj);
             _context.SaveChanges();
         }
+
 
     }
 }
