@@ -7,7 +7,11 @@ O sistema permite realizar operações CRUD completas, com interface simples e i
 
 ## Demonstração
 
-![Sellers Screen](./docs/screenshot.png)
+### Cadastrar vendedor
+![Sellers](./docs/sellers.png)
+
+### Departamentos
+![Departments](./docs/departments.png)
 
 ---
 
