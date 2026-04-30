@@ -8,10 +8,10 @@ O sistema permite realizar operações CRUD completas, com interface simples e i
 ## Demonstração
 
 ### Cadastrar vendedor
-![Sellers](./docs/sellers.jpg)
+![Sellers](./docs/sellers.JPG)
 
 ### Departamentos
-![Departments](./docs/departments.jpg)
+![Departments](./docs/departments.JPG)
 
 ---
 
